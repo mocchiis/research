@@ -62,7 +62,7 @@ void setup() {
 void loop() {
   int count = 0;
   //Serial.print("-----シリアル------");
-  int received = 7;//0,1でない数字
+  int received = 0;//a,0,1でない数字
   
    if (Serial.available() > 0){// 受信したデータが存在する
     received = Serial.read(); // 受信データを読み込む
@@ -97,7 +97,7 @@ void loop() {
   
   }
 
-  if(received==1){//「f」と送られたら前に進む
+  if(received==49){//「1」と送られたら前に進む
     Serial.println(1);
     forward();
     delay(200);
@@ -107,7 +107,7 @@ void loop() {
     mySerial.write(count);
     delay(1000);
  }
- if(received==0){//「b」と送られたら後ろに進む
+ if(received==48){//「0」と送られたら後ろに進む
     Serial.println(-1);
     back();
     delay(200);//0.2秒

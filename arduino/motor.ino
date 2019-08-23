@@ -1,4 +1,4 @@
-//RandomWalk
+
 #include <SoftwareSerial.h>
 SoftwareSerial mySerial(2, 3); // RX, TX
 
@@ -67,7 +67,7 @@ void loop() {
    if (Serial.available() > 0){// 受信したデータが存在する
     received = Serial.read(); // 受信データを読み込む
    }
-   
+   //#################RandomWalk####################
     if(received==97){//「a」と打ったらランダムウォーク
      for(int i=0; i<20; i++){
     
@@ -96,7 +96,7 @@ void loop() {
     }
   
   }
-
+  //#######################前後##########################
   if(received==49){//「1」と送られたら前に進む
     Serial.println(1);
     forward();

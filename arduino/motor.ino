@@ -97,24 +97,26 @@ void loop() {
   
   }
   //#######################前後##########################
-  if(received==49){//「1」と送られたら前に進む
+  if(received==49){//「1」と送られたら前に進むf:102
     Serial.println(1);
     forward();
     delay(200);
     stop();
     delay(2000);
-    count =122; 
-    mySerial.write(count);
+    //count =122; 
+    //mySerial.write(count);
+    Serial.write(112);//p
     delay(1000);
  }
- if(received==48){//「0」と送られたら後ろに進む
+ if(received==48){//「0」と送られたら後ろに進むb:98
     Serial.println(-1);
     back();
     delay(200);//0.2秒
     stop();
     delay(2000);
-    count =122; 
-    mySerial.write(count);
+    //count =122; 
+    //mySerial.write(count);
+    Serial.write(112);//p
     delay(1000);
  }
 }

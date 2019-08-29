@@ -69,6 +69,7 @@ void loop() {
     if (Serial.available() > 0){// 受信したデータが存在する
     received_pc = Serial.read(); // 受信データを読み込む
    }
+   
    if(received_pc==114){//r
     CURRENT_SENSOR[0] = Distance_test();//センサ１の値。
     CURRENT_SENSOR[1] = Distance_test2();//センサ２の値。
